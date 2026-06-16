@@ -235,3 +235,22 @@ html {
     display: inline-block;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
+
+
+.skills-intro {
+    font-size: 1.1rem;
+    color: #4b5563; /* A slightly softer dark gray to create hierarchy */
+    max-width: 800px; /* Prevents the text from stretching too wide on massive screens */
+    margin-bottom: 30px; /* Creates a clean gap before the badges start */
+    line-height: 1.6; /* Makes the text easier and more comfortable to read */
+}
+
+/* Contact Section Intro Text */
+.contact-intro {
+    text-align: center;      /* Centers the text horizontally */
+    font-size: 1.1rem;
+    color: #4b5563;          /* Matches the soft dark gray used in the skills intro */
+    max-width: 600px;        /* Keeps the sentence wrapped neatly above the form box */
+    margin: -20px auto 40px; /* Shifts it closer to the h2 heading, centers the block, and adds spacing above the form */
+    line-height: 1.6;
+}
