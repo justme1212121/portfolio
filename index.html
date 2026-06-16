@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Syed Naqvi | Portfolio</title>
+</head>
+<body>
+    
+    <!-- Navbar--> 
+    <nav>
+        <div class="left">
+            <a href="/">Syed Naqvi</a>
+        </div>
+        <div class="right">
+            <a href="https://github.com/justme1212121" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://linkedin.com/in/syed-r-n-24b130377" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:arnaqvi2006@gmail.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+        </div>
+    </nav>
+
+<main>
+    <!-- SECTION 1: Hero -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Hi, I'm Syed. 👋 </h1>
+            <p>I'm an Electronics Engineering Student at Carleton University, specializing in embedded systems and manufacturing technologies—bridging the gap between hardware design and intelligent software.</p>
+
+            <div class="links">
+                <a href="#skills">
+                    <i class="fa-solid fa-code"></i>  
+                    <span>Skills</span>    
+                </a>
+                <a href="#projects">
+                    <i class="fa-solid fa-tools"></i>
+                    <span>Projects</span>
+                </a>
+                <a href="#contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </div>
+        </div>
+        <div class="headshot">   
+            <img src="images/headshot.jpeg" alt="Syed Naqvi">
+        </div>
+    </section>
+
+    <!-- SECTION 2: Skills -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <p class="skills-intro">Proficient in core engineering methodologies, hardware design, and software programming applied to embedded systems.</p>
+        
+        <div class="skills-categories">
+            <!-- Category 1 -->
+            <div class="category-block">
+                <h3><i class="fa-solid fa-code" style="margin-right: 8px; color: #7c1d1d;"></i> Programming & Firmware</h3>
+                <div class="skill-list">
+                    <div class="clickable-skill" data-skill="Embedded C" data-description="">Embedded C</div>
+                    <div class="clickable-skill" data-skill="Python" data-description="">Python</div>
+                    <div class="clickable-skill" data-skill="MATLAB" data-description="">MATLAB</div>
+                    <div class="clickable-skill" data-skill="Assembly" data-description="">Assembly</div>
+                    <div class="clickable-skill" data-skill="Git / GitHub" data-description="">Git / GitHub</div>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="category-block">
+                <h3><i class="fa-solid fa-microchip" style="margin-right: 8px; color: #7c1d1d;"></i> Hardware & Digital Systems</h3>
+                <div class="skill-list">
+                    <div class="clickable-skill" data-skill="Verilog HDL" data-description="">Verilog HDL</div>
+                    <div class="clickable-skill" data-skill="FPGA Prototyping" data-description="">FPGA Prototyping</div>
+                    <div class="clickable-skill" data-skill="Arduino / AVR MCUs" data-description="">Arduino / AVR MCUs</div>
+                    <div class="clickable-skill" data-skill="I2C / SPI / UART" data-description="">I2C / SPI / UART</div>
+                    <div class="clickable-skill" data-skill="Circuit Simulation (LTspice)" data-description="">Circuit Simulation (LTspice)</div>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="category-block">
+                <h3><i class="fa-solid fa-compass-drafting" style="margin-right: 8px; color: #7c1d1d;"></i> CAD, Design & Lab Tools</h3>
+                <div class="skill-list">
+                    <div class="clickable-skill" data-skill="Fusion 360" data-description="">Fusion 360</div>
+                    <div class="clickable-skill" data-skill="AutoCAD" data-description="">AutoCAD</div>
+                    <div class="clickable-skill" data-skill="Oscilloscopes & Multimeters" data-description="">Oscilloscopes & Multimeters</div>
+                    <div class="clickable-skill" data-skill="Signal Analysis" data-description="">Signal Analysis</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: Projects -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <p class="coming-soon">Coming soon.</p>
+    </section>
+
+    <!-- SECTION 4: Contact -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p class="contact-intro">Feel free to reach out! Whether you have a question, a project proposal, or just want to connect, my inbox is always open.</p>
+        <div class="contact-container">
+           <form action="https://formspree.io/f/mzdqeelp" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="_replyto" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<!-- Interactive Skill Info Modal Overlay -->
+<div id="skillModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modalSkillName">Skill Name</h2>
+        <p id="modalSkillDescription">Skill details go here.</p>
+    </div>
+</div>
+
+<!-- Modal Control Logic JavaScript -->
+<script>
+    const skills = document.querySelectorAll('.clickable-skill');
+    const modal = document.getElementById('skillModal');
+    const modalName = document.getElementById('modalSkillName');
+    const modalDesc = document.getElementById('modalSkillDescription');
+    const closeBtn = document.querySelector('.close-btn');
+
+    // Open dynamic information card overlay
+    skills.forEach(skill => {
+        skill.addEventListener('click', () => {
+            modalName.innerText = skill.getAttribute('data-skill');
+            modalDesc.innerText = skill.getAttribute('data-description');
+            modal.classList.add('show-modal');
+        });
+    });
+
+    // Close window when user clicks the icon toggle
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('show-modal');
+    });
+
+    // Close window option if user triggers external page target area
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('show-modal');
+        }
+    });
+</script>
+
+
+<footer>
+    <p>&copy; 2026 Syed Naqvi. All Rights Reserved.</p>
+</footer>
+
+<div id="skillModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2 id="modalSkillName">Skill Name</h2>
+        <p id="modalSkillDescription">Skill details go here.</p>
+    </div>
+</body>
+</html>
