@@ -1,20 +1,20 @@
-:root{
+:root {
     --text-color: #111827;
     --link-color: #660202;
     --background-color: #ece1cd;
-
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
@@ -25,8 +25,7 @@ a {
     text-decoration: none;
 }
 
-/* Navbar */
-
+/* Navbar Layout Rules */
 nav {
     display: flex;
     justify-content: space-between;
@@ -41,22 +40,30 @@ nav .left a {
     font-weight: 600;
     color: var(--text-color);
 }
+
 nav .right a {
     color: var(--text-color);
     margin: 0 10px;
-
 }
+
 nav .right a:last-child {
     color: var(--background-color);
     background-color: var(--text-color);
     padding: 5px 15px;
     border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav .right a span{
+nav .right a:last-child:hover {
+    background-color: #7c1d1d;
+    color: white;
+}
+
+nav .right a span {
     margin-left: 5px;
 }
-/* Responsive Design */
+
+/* Hero Display Setup */
 .hero-section {
     display: flex;
     justify-content: space-between;
@@ -65,27 +72,27 @@ nav .right a span{
     margin: 50px 0;
     gap: 40px;
 }
-.hero-section .text h2{
+
+.hero-section .text h2 {
     font-size: 36px;
 }
-.hero-section .links{
+
+.hero-section .links {
     margin-top: 20px;
 }
 
-.hero-section .links a{
-display: inline-block;
-padding: 10px 20px;
-border: 2px solid var(--text-color);
-margin-bottom:10px;
-border-radius: 5px;
-}
-
 .hero-section .links a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
     background-color: #7c1d1d;
     color: white;
     border: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
-.hero-section .links a:hover{
+
+.hero-section .links a:hover {
     background-color: var(--text-color);
     color: var(--background-color);
 }
@@ -105,25 +112,59 @@ border-radius: 5px;
     max-width: 100%;
     border-radius: 50%;
 }
-@media (max-width: 600px) {
-    nav {
-        /*navbar */
-        padding: 0 20px;
-    }
-    nav .right a{
-        font-size: 22px;
-    }
-    nav .right a span{
-        display: none;
-    }
-}
 
-#skills {
+/* Section Containers & Scroll-Driven Animation Mechanics */
+#skills,
+#projects,
+#contact {
     padding: 100px 50px;
+    animation: fadeInUp 0.8s ease-out both;
 }
 
-#skills h2 {
+#skills h2,
+#projects h2,
+#contact h2 {
     margin-bottom: 20px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Balanced Skills Section Formatting Layouts */
+#skills h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.skills-intro {
+    font-size: 1rem;
+    color: #4b5563;
+    max-width: 800px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.skills-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.category-block h3 {
+    font-size: 1.15rem;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 .skill-list {
@@ -132,34 +173,52 @@ border-radius: 5px;
     gap: 10px;
 }
 
-.skill-list div {
+/* Base Interactive Badge Blueprint */
+.clickable-skill {
     padding: 10px 15px;
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     border-radius: 5px;
-}
-#skills,
-#projects,
-#contact {
-    padding: 100px 50px;
-}
-
-#skills h2,
-#projects h2,
-#contact h2 {
-    margin-bottom: 20px;
-}
-html {
-    scroll-behavior: smooth;
+    font-size: 0.9rem;
+    font-weight: 400;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.25s ease;
 }
 
-#contact {
-    padding: 100px 50px;
+/* Responsive Micro-Interaction Mechanics on Badge Hover */
+.clickable-skill:hover {
+    background-color: #7c1d1d;
+    color: white;
+    border-color: #7c1d1d;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(124, 29, 29, 0.15);
 }
 
+/* Project Area Specifications */
+.coming-soon {
+    font-style: italic;
+    color: #666;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Contact Area Specifications */
 #contact h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2rem;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #4b5563;
+    max-width: 600px;
+    margin: -20px auto 40px;
+    line-height: 1.6;
 }
 
 .contact-container {
@@ -171,27 +230,20 @@ html {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
     padding: 30px;
-
     background-color: white;
     border-radius: 12px;
-
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
 .contact-container input,
 .contact-container textarea {
     width: 100%;
-
     padding: 15px;
-
     border: 1px solid #ccc;
     border-radius: 8px;
-
     font-family: inherit;
     font-size: 1rem;
-
     outline: none;
 }
 
@@ -207,18 +259,13 @@ html {
 
 .contact-container button {
     padding: 15px;
-
     border: none;
     border-radius: 8px;
-
     background-color: #7c1d1d;
     color: white;
-
     font-size: 1rem;
     font-weight: 600;
-
     cursor: pointer;
-
     transition: 0.3s;
 }
 
@@ -226,31 +273,86 @@ html {
     transform: translateY(-2px);
     opacity: 0.9;
 }
-.coming-soon {
-    font-style: italic;
-    color: #666;
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    display: inline-block;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+
+/* Modals Core Component Styling Overlay rules */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
-
-.skills-intro {
-    font-size: 1.1rem;
-    color: #4b5563; /* A slightly softer dark gray to create hierarchy */
-    max-width: 800px; /* Prevents the text from stretching too wide on massive screens */
-    margin-bottom: 30px; /* Creates a clean gap before the badges start */
-    line-height: 1.6; /* Makes the text easier and more comfortable to read */
+/* Activation Trigger CSS Class for Pop-up Modal */
+.modal.show-modal {
+    opacity: 1;
+    pointer-events: auto;
 }
 
-/* Contact Section Intro Text */
-.contact-intro {
-    text-align: center;      /* Centers the text horizontally */
-    font-size: 1.1rem;
-    color: #4b5563;          /* Matches the soft dark gray used in the skills intro */
-    max-width: 600px;        /* Keeps the sentence wrapped neatly above the form box */
-    margin: -20px auto 40px; /* Shifts it closer to the h2 heading, centers the block, and adds spacing above the form */
+/* Central Informative Content Display Card Box */
+.modal-content {
+    background-color: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transform: scale(0.85);
+    transition: transform 0.3s ease;
+}
+
+.modal.show-modal .modal-content {
+    transform: scale(1);
+}
+
+/* Card Internal Structural Typography */
+#modalSkillName {
+    font-size: 1.5rem;
+    color: #7c1d1d;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+#modalSkillDescription {
+    font-size: 1rem;
+    color: #374151;
     line-height: 1.6;
+}
+
+/* Modal Content Cancellation Close Node Element Button Toggle */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: #111827;
+}
+
+/* Responsive Structure Adjustments for Small Layout Screen Units */
+@media (max-width: 600px) {
+    nav {
+        padding: 0 20px;
+    }
+    nav .right a {
+        font-size: 22px;
+    }
+    nav .right a span {
+        display: none;
+    }
 }
