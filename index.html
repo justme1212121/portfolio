@@ -98,12 +98,12 @@
     <h2>Contact</h2>
 
     <div class="contact-container">
-        <form>
-            <input type="text" placeholder="Your Name">
+        <form action="https://formspree.io/f/mzdqeelp" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
 
-            <input type="email" placeholder="Your Email">
+            <input type="email" name="_replyto" placeholder="Your Email" required>
 
-            <textarea placeholder="Your Message"></textarea>
+            <textarea name="message" placeholder="Your Message" required></textarea>
 
             <button type="submit">Send Message</button>
         </form>
